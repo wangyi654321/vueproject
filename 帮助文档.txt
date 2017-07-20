@@ -1,0 +1,5 @@
+运行这个项目的步骤：
+1 \  cnpm i                    下载所有依赖包
+2、在项目根目录下打开cmd命令面板，输入：
+       cnpm install vue-loader vue-template-compiler babel-plugin-transform-runtime --save-dev        回车即可完成安装
+       cnpm install vue --save                回车即可完成安装
