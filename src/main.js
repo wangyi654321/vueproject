@@ -29,7 +29,9 @@ import newinfo from '../components/new/newinfo.vue'; //资讯详情页面
 import photolist from '../components/photo/photolist.vue'; //图片分享
 import photoinfo from '../components/photo/photoinfo.vue'; //图片详情页
 import goodslist from '../components/goods/goodslist.vue'; //商品购买
-import goodsinfo from '../components/goods/goodsinfo.vue'; //商品购买
+import goodsinfo from '../components/goods/goodsinfo.vue'; //商品信息
+import goodsdesc from '../components/goods/goodsdesc.vue'; //商品详情页面
+import goodscomment from '../components/goods/goodscomment.vue'; //goods下边的goodscomment评论组件
 
 // 引入css文件
 import "../statics/css/site.css"
@@ -47,6 +49,7 @@ Vue.filter("datafmt", function (input, fmtstring) {
 //photoinfo 页面图片轮播效果;
 import VuePreview from 'vue-preview'
 Vue.use(VuePreview)
+
 
 var router1 = new vueRouter({
     linkActiveClass: "mui-active", //改变路由激活时候的样式;
@@ -83,6 +86,14 @@ var router1 = new vueRouter({
         {
             path: '/goods/goodsinfo/:id',
             component: goodsinfo
+        },
+        {
+            path: '/goods/goodsdesc/:id',
+            component: goodsdesc
+        },
+        {
+            path: '/goods/goodscomment/:id',
+            component: goodscomment
         },
     ]
 })

@@ -34,7 +34,7 @@ module.exports = {
         loader: 'vue-loader' //
       },
       {
-        test: /vue-preview.src.*?js$/,//photoinfo 轮播
+        test: /vue-preview.src.*?js$/, //photoinfo 轮播
         loader: 'babel'
       }
     ]
@@ -42,7 +42,13 @@ module.exports = {
   babel: {
     presets: ['es2015'], // 配置将es6语法转换成es5语法
     plugins: ['transform-runtime']
-  },
+  }, //修改默认端口号
+  // devServer: {
+  //   historyApiFallback: true,
+  //   noInfo: true,
+  //   port: 8080, //访问端口
+  //   colors: true
+  // },
   plugins: [
     new htmlwp({
       title: '首页', //生成的页面标题<head><title>首页</title></head>
