@@ -1,10 +1,6 @@
 <template>
     <div id="tmpMar">
-        <mt-swipe :auto="4000">
-            <mt-swipe-item v-for="item in list" :key="item.id">
-                <img :src="item.img">
-            </mt-swipe-item>
-        </mt-swipe>
+        <silder :imgs="list"></silder>
         <div class="mui-content">
             <ul class="mui-table-view mui-grid-view mui-grid-9">
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
@@ -51,12 +47,14 @@
 <script>
 import { Toast } from 'mint-ui';
 import common from '../kits/common.js';
+import silder from "./silider/silder.vue"
 export default {
+    components: {
+        silder
+    },
     data() {
         return {
-            list: [
-
-            ]
+            list: []
         }
     },
     created() {
